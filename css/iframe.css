@@ -1,0 +1,76 @@
+.container {
+    min-height: 50px
+}
+
+.container:empty {
+    border: 2px dashed #919191;
+    min-height: 200px
+}
+
+.row {
+    min-height: 50px
+}
+
+.row:empty {
+    border: 2px dashed #919191;
+    min-height: 150px;
+    width: 100%;
+    min-width: 500px
+}
+
+.dragging [class^=col-] {
+    min-height: 150px;
+    border: 2px dashed #919191
+}
+
+[class^=col-]:empty {
+    min-height: 150px;
+    border: 2px dashed #919191
+}
+
+[class^=col-]:empty > .drop-placeholder {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+div:empty {
+    border: 2px dashed #919191;
+    min-height: 100px
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    user-select: none;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+body > .row {
+    margin: 0
+}
+
+form {
+    min-height: 50px
+}
+
+form:empty:before {
+    pointer-events: none;
+    display: block;
+    width: 100%;
+    height: 100px;
+    content: 'Drag form elements here';
+    text-align: center;
+    background-color: #eee;
+    color: #919191;
+    font-size: 22px;
+    border: 2px dashed #919191;
+    padding-top: 33px
+}
+
+[contenteditable=true] {
+    outline: #404040 solid 2px
+}
